@@ -201,6 +201,11 @@ body {
     min-width: 140px;
 }
 
+.number-group {
+    flex: 1;
+    min-width: 100px;
+}
+
 .form-group label {
     font-size: 0.8rem;
     font-weight: 600;
@@ -465,6 +470,23 @@ body {
     color: var(--text-muted);
 }
 
+.task-item.pending {
+    border-left: 4px solid var(--warning);
+}
+
+.task-item.processing {
+    border-left: 4px solid var(--primary);
+}
+
+.task-item.completed {
+    border-left: 4px solid var(--success);
+}
+
+.task-item.cancelled {
+    border-left: 4px solid var(--danger);
+    opacity: 0.6;
+}
+
 .task-item.removing {
     animation: slideOut 0.3s ease forwards;
 }
@@ -594,6 +616,20 @@ body {
 .task-date {
     font-size: 0.75rem;
     color: var(--text-muted);
+}
+
+.task-notes {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+/* Order specific styles */
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* Acciones de la tarea */
